@@ -2,14 +2,14 @@ import React from "react";
 import Bell from "@/public/Bell";
 import Search from "@/public/Search";
 import Message from "@/public/Message";
-
+import Image from "next/image";
 import Link from "next/link";
 import ProfileMenu from "./ui/ProfileMenu";
 import Settings from "@/public/Settings";
 
 export default function Header() {
   return (
-    <header className="w-[99%] flex mt-2 h-[60px]  bg-blockground/90 rounded-b-xl  md:justify-around justify-between  items-center">
+    <header className="w-[99%] flex  h-[60px]  bg-blockground/90 rounded-b-xl  md:justify-around justify-between  items-center">
       {/* ------------------------------------------- Профиль и сообщения ---------------------------------------------- */}
 
       <div className="md:flex  hidden justify-center items-center ">
@@ -24,8 +24,14 @@ export default function Header() {
       {/* ------------------------------------------ Логотип ---------------------------------------------------- */}
 
       <div className="ml-14 md:ml-0">
-        <Link href="/" className="font-extrabold text-3xl text-fuchsia-200">
-          Tema
+        <Link href="/">
+          <Image
+            className="rounded-full hover:scale-110 transition-all duration-300"
+            src="/logo.png"
+            width={55}
+            height={55}
+            alt="logo"
+          />
         </Link>
       </div>
 

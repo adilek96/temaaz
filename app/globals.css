@@ -5,14 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #384455;
-  --blockground: 245, 158, 11;
+  --blockground: 177,174,255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #384455;
     --foreground: #ededed;
-    --blockground: 245, 158, 11;
+    --blockground: 177,174,255;
   }
 }
 
