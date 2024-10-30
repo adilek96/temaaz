@@ -23,13 +23,13 @@ export default function Header() {
 
       {/* ------------------------------------------ Логотип ---------------------------------------------------- */}
 
-      <div className="ml-14 md:ml-0">
+      <div className="ml-10 md:ml-0">
         <Link href="/">
           <Image
-            className="rounded-full hover:scale-110 transition-all duration-300"
+            className="rounded-full hover:scale-110 transition-all duration-300 shadow-lg animate-pulse-glow "
             src="/logo.png"
-            width={55}
-            height={55}
+            width={50}
+            height={50}
             alt="logo"
           />
         </Link>
@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* ------------------------------------------------------------------------------------------------------ */}
 
-      <div className="flex md:hidden w-[40px] h-[40px] items-center justify-center mr-14  p-1 rounded-xl hover:bg-blockground/70 transition-all duration-300">
+      <div className="flex md:hidden w-[40px] h-[40px] items-center justify-center mr-10  p-1 rounded-xl hover:bg-blockground/70 transition-all duration-300">
         <Settings />
       </div>
     </header>
