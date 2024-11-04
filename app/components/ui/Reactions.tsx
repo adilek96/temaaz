@@ -15,7 +15,7 @@ export default function Reactions() {
     <div
       onMouseMove={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="relative bg-indigo-500 hover:bg-blockground/70  flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-300 "
+      className="relative bg-blockground hover:bg-blockground/70  flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-300 "
     >
       <p className="text-[9px] cursor-default">Нет реакций</p>
       {isHover ? <ReactionFill /> : <Reaction />}
