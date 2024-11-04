@@ -4,16 +4,20 @@ import Search from "@/public/Search";
 import Message from "@/public/Message";
 import Image from "next/image";
 import Add from "@/public/Add";
+import Link from "next/link";
 
 export default function BottomNav() {
   return (
-    <nav className=" w-[99%] md:hidden absolute bottom-0   h-[60px] bg-blockground/90 rounded-t-xl flex justify-around items-center">
+    <nav className=" w-[99%] md:hidden absolute bottom-0 mx-auto   h-[60px] bg-blockground/90 rounded-t-xl flex justify-around items-center">
       <ul className="flex gap-5">
         {/* ------------------------------------------- Добаление ---------------------------------------------- */}
         <li>
-          <div className="w-[40px] h-[40px] flex items-center justify-center  p-1 rounded-xl hover:bg-blockground/70 transition-all duration-300">
+          <Link
+            href="/addPost"
+            className="w-[40px] h-[40px] flex items-center justify-center  p-1 rounded-xl hover:bg-blockground/70 transition-all duration-300"
+          >
             <Add />
-          </div>
+          </Link>
         </li>
         {/* ------------------------------------------------------------------------------------------------------- */}
         {/* ------------------------------------------- Cообщения ---------------------------------------------- */}

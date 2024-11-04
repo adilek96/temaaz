@@ -35,7 +35,7 @@ export default function ProfileMenu() {
         >
           <Link
             className="py-2 pr-32 pl-3  w-full rounded-xl hover:bg-blockground/70 transition-all duration-300 flex gap-3"
-            href="#"
+            href="/addPost"
           >
             <Add />
             <span>Добавить</span>

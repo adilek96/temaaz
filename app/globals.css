@@ -25,14 +25,14 @@ body {
 @keyframes pulse-glow {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 5px rgb(239, 239, 241), 0 0 10px rgba(207, 206, 230), 0 0 20px rgb(226, 225, 236);
+    box-shadow: 0 0px 10px rgb(239, 239, 241), 0 0px 8px rgba(207, 206, 230), 0 0px 5px rgb(226, 225, 236);
   }
   50% {
     transform: scale(1);
-    box-shadow: 0 0 5px rgb(207, 206, 230), 0 0 10px rgb(215, 215, 231), 0 0 20px rgb(200, 199, 231);
+    box-shadow: 0 0px 5px rgb(207, 206, 230), 0 0px 8px rgb(215, 215, 231), 0 0px 10px rgb(200, 199, 231);
   }
 }
 
 .animate-pulse-glow {
-  animation: pulse-glow 2s infinite;
+  animation: pulse-glow 2s linear infinite alternate;
 }

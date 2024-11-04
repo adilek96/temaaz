@@ -9,7 +9,7 @@ import Settings from "@/public/Settings";
 
 export default function Header() {
   return (
-    <header className="w-[99%] flex  h-[60px]  bg-blockground/90 rounded-b-xl  md:justify-around justify-between  items-center">
+    <header className="w-[99%] flex  h-[60px]  bg-blockground/90 rounded-b-xl  md:justify-around justify-between  items-center mx-auto">
       {/* ------------------------------------------- Профиль и сообщения ---------------------------------------------- */}
 
       <div className="md:flex  hidden justify-center items-center ">
