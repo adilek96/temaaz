@@ -29,9 +29,16 @@ export default async function Post() {
       </div>
       {/* ////////////////////////////////////////////////////// */}
       <div className="w-full bg-white h-[200px]"></div>
-      <div className="w-full flex justify-start px-5 mt-2 gap-2">
-        <Reactions />
-        <Comments />
+      {/* ////////////////////////////////////////////////////// */}
+      <div className="flex justify-between w-full">
+        <div className="w-full flex justify-start px-5 mt-2 gap-2">
+          <Reactions />
+          <Comments />
+        </div>
+        <div className="text-[9px] flex flex-col justify-center  px-5 mt-2 cursor-default">
+          <span>14.11.2024</span>
+          <span>Сегодня</span>
+        </div>
       </div>
     </div>
   );
