@@ -7,9 +7,40 @@ import Settings from "@/public/Settings";
 import ProfileCard from "@/public/ProfileCard";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useMutation } from "@apollo/client";
+import { LOGOUT } from "@/app/graphql/mutations";
+import { removeTokens, getAccessToken } from "@/app/lib/auth";
 
 export default function ProfileMenu() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [logout] = useMutation(LOGOUT);
+
+  const handleLogout = async () => {
+    try {
+      const accessToken = getAccessToken();
+      if (!accessToken) {
+        removeTokens();
+        router.push("/auth/login");
+        return;
+      }
+
+      await logout({
+        context: {
+          headers: {
+            authorization: `Bearer ${accessToken}`,
+          },
+        },
+      });
+
+      removeTokens();
+      router.push("/auth/login");
+    } catch (err: any) {
+      removeTokens();
+      router.push("/auth/login");
+    }
+  };
 
   return (
     <div
@@ -55,12 +86,13 @@ export default function ProfileMenu() {
             <span> Профиль</span>
           </Link>
           <div className="w-[90%] h-1 bg-slate-300/40 rounded-xl"></div>
-          <Link
+          <button
+            type="button"
             className="py-2 pr-32 pl-3  w-full rounded-xl hover:bg-blockground/70 transition-all duration-300"
-            href="#"
+            onClick={handleLogout}
           >
             Выход
-          </Link>
+          </button>
         </div>
       )}
     </div>

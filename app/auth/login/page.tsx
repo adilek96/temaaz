@@ -33,12 +33,26 @@ export default function LoginPage() {
       </div>
 
       <div className="flex w-full justify-center gap-2 text-blockground/90 hover:text-blockground/70 transition-all duration-300">
-        <button className="">
-          <FaGoogle className="mr-2 h-7 w-7 " />
-        </button>
-        <button className="">
-          <FaFacebook className="mr-2 h-7 w-7" />
-        </button>
+        <form
+        // action={async () => {
+        //   "use server";
+        //   await signIn("google", { redirectTo: "/feed" });
+        // }}
+        >
+          <button type="submit" className="">
+            <FaGoogle className="mr-2 h-7 w-7 " />
+          </button>
+        </form>
+        <form
+        // action={async () => {
+        //   "use server";
+        //   await signIn("google", { redirectTo: "/feed" });
+        // }}
+        >
+          <button type="submit" className="">
+            <FaFacebook className="mr-2 h-7 w-7" />
+          </button>
+        </form>
       </div>
     </div>
   );
